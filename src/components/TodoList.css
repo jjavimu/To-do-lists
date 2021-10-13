@@ -1,0 +1,23 @@
+.list{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
+    margin: 10px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.list-btns{}
+ .add-btn{}
+.mdf-btn{}
+ .del-btn{}
+ .list-name{}
+.list-desc{}
+ul{
+    list-style-type: none;
+    padding:5px;
+    font-weight: bold;
+}
+li{   
+    list-style-type: none;
+    padding:5px;
+    font-weight: bold;
+}

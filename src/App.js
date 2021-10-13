@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AddListForm from './components/AddListForm';
+import AddTaskForm from './components/AddTaskForm';
+import Header from './components/Header';
+import { ListProvider } from './components/ListContext';
+import Lists from './components/Lists';
 
 function App() {
+  // Hook para visualizar/cerrar AddListForm y AddTaskForm
+  const [showAddListForm, setShowAddListForm] = useState(false);
+  const [showAddTaskForm, setShowAddTaskForm] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ListProvider>
+      <div className="App">
+        <Header />
+        <div className="buttons">
+          <AddListForm trigger={showAddListForm} setTrigger={setShowAddListForm} />
+          <AddTaskForm trigger={showAddTaskForm} setTrigger={setShowAddTaskForm} />
+        </div>
+        <Lists />
+
+      </div>
+    </ListProvider>
   );
 }
 
