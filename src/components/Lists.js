@@ -4,7 +4,7 @@ import TodoList from './TodoList';
 import "./Lists.css"
 
 function Lists() {
-    const [lists, , , ,] = useContext(ListContext);
+    const [lists,] = useContext(ListContext);
     return (
         <div className="list-container">
             {lists.map((list, index) => (

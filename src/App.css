@@ -1,14 +1,13 @@
 .App {
   padding: 10px;
   text-align: center;
+}
+html {
   background: #E9C46A;
   background: -moz-linear-gradient(left, #E9C46A 0%, #F4A261 50%, #E76F51FF 100%);
   background: -webkit-linear-gradient(left, #E9C46A 0%, #F4A261 50%, #E76F51FF 100%);
   background: linear-gradient(to right, #E9C46A 0%, #F4A261 50%, #E76F51FF 100%);
-  min-height: 100vh;
-  min-width: 100vw;
 }
-
 .buttons{
   margin:10px;
   padding: 10px;

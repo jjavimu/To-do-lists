@@ -7,7 +7,7 @@ function AddTaskForm(props) {
     const [dateInput, setDateInput] = useState('');
     const [toList, setToList] = useState(0);
     const [priorityInput, setPriorityInput] = useState(0);
-    const [lists, , , addTask,] = useContext(ListContext);
+    const [lists, , , , addTask, , , ,] = useContext(ListContext);
 
     const closeForm = () => {
         props.setTrigger(false);
@@ -31,7 +31,7 @@ function AddTaskForm(props) {
 
     const callAddTaskToList = (e) => {
         e.preventDefault();
-        console.log('name: ' + nameInput + 'date: ' + dateInput + 'p: ' + priorityInput + 'indexList: ' + toList)
+        // console.log('name: ' + nameInput + 'date: ' + dateInput + 'p: ' + priorityInput + 'indexList: ' + toList)
         // Creamos la nueva lista
         if (!nameInput || !dateInput) {
             window.alert("You need to put a name and a deadline!")
@@ -40,6 +40,8 @@ function AddTaskForm(props) {
         const newTask = {
             todoName: nameInput,
             todoDone: false,
+            todoDeadline: dateInput,
+            todoPriority: priorityInput
         }
         // Llamamos a añadir task con el método del context
         addTask(newTask, toList);
@@ -55,12 +57,14 @@ function AddTaskForm(props) {
                 X
             </button>
             <form className="add-task-form" onSubmit={callAddTaskToList}>
-                <input type="text" placeholder="Add a new task" value={nameInput} name="text" className="name-input" onChange={updateName} />
-                <input type="text" placeholder="Task deadline" value={dateInput} name="date" className="date-input" onChange={updateDate} />
+                <input type="text" placeholder="Add a new task" value={nameInput} name="text" className="name-input" onChange={updateName} autoComplete="off" />
+                <br />
+                <input type="datetime-local" placeholder="Task deadline" value={dateInput} name="date" className="date-input" onChange={updateDate} autoComplete="off" />
+                <br />
                 <select name="select-priority" id="select-priority" onChange={updatePriority}>
-                    <option value="0">Alta</option>
-                    <option value="1">Media</option>
-                    <option value="2">Baja</option>
+                    <option value="3">Alta</option>
+                    <option value="2">Media</option>
+                    <option value="1">Baja</option>
                 </select>
                 <select name="select-list" id="select-list" value={toList} onChange={updateToList}>
                     {lists.map((l, index) => (<option key={index} value={index}> {l.listName} </option>))}

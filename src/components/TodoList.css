@@ -1,23 +1,92 @@
-.list{
+.list {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
-    margin: 10px;
+    margin: 15px;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
+    min-width: 400px;
+    height: min-content;
 }
-.list-btns{}
- .add-btn{}
-.mdf-btn{}
- .del-btn{}
- .list-name{}
-.list-desc{}
+.list-btns {
+    margin:10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+}
+.list-btns .add-btn{
+    padding:10px;
+    width: 80px;
+    background-color: var(--orange-yellow-crayola);
+    color: white;
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.list-btns .mdf-btn{
+    width: 80px;
+    background-color: var(--sandy-brown);
+    color: white;
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.list-btns .del-btn{
+    width: 80px;
+    background-color: var(--burnt-sienna);
+    color: white;
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor:pointer;
+}
+ .list-name{
+     padding: 10px;;
+ }
+.list-desc{
+}
+.modify-options{
+    background-color: var(--sandy-brown);
+    border: 2px solid black;
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+
+}
+.modify-options * {
+    padding: 10px;
+    margin:10px;
+    font-weight: bold;
+ }
+ .modify-options input {
+    font-weight:normal;
+ }
 ul{
     list-style-type: none;
-    padding:5px;
+    margin:10px;
+    padding:10px;
     font-weight: bold;
+    text-align: left;
 }
 li{   
+    background-color: rgba(38, 70, 83, 0.2);
+    border-radius: 10px;
+    margin-top:20px;
+    padding:10px;
     list-style-type: none;
-    padding:5px;
     font-weight: bold;
 }
+/*
+  --charcoal: #264653ff;
+  --persian-green: #2a9d8fff;
+  --orange-yellow-crayola: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+  */
