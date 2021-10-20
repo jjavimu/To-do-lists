@@ -53,7 +53,8 @@ export const ListProvider = (props) => {
 
 
     const search = (keywords, startDate, endDate, priority) => {
-
+        if (keywords === '' && startDate === '' && endDate === '' && priority === 0)
+            return [];
         var prueba = [];
         for (const l of lists) {
             prueba.push({

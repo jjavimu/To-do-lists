@@ -7,6 +7,7 @@
     padding: 15px;
     justify-content: center;
 }
+
 .close-btn{
     position:relative;
     background-color: var(--burnt-sienna);
@@ -54,3 +55,4 @@
     cursor:pointer;
 
 }
+

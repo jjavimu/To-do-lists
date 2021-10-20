@@ -4,9 +4,9 @@
 }
 html {
   background: #E9C46A;
-  background: -moz-linear-gradient(left, #E9C46A 0%, #F4A261 50%, #E76F51FF 100%);
-  background: -webkit-linear-gradient(left, #E9C46A 0%, #F4A261 50%, #E76F51FF 100%);
-  background: linear-gradient(to right, #E9C46A 0%, #F4A261 50%, #E76F51FF 100%);
+
+  background: linear-gradient(to right, #E9C46A 0%, #E76F51FF 50%, #E9C46A 100%);
+  
 }
 .buttons{
   margin:10px;

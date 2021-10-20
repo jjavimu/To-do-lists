@@ -6,5 +6,5 @@
 }
 .header{
     font-size: 75px;
-
+    text-shadow: 2px 2px 0 var(--persian-green), 2px -2px 0 var(--persian-green), -2px 2px 0 var(--persian-green), -2px -2px 0 
 }

@@ -8,6 +8,11 @@
     padding-bottom: 0;
     align-items: left;
     display: grid;
+    transition:300ms;
+}
+.search-result:hover{
+    margin: -2px;
+    cursor:pointer;
 }
 
 .search-result h5{
