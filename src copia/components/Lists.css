@@ -1,0 +1,11 @@
+.list-container{
+    margin: 20px;
+    padding: 50px;
+    display: flex;
+    /* width: min-content; */
+    /* grid-template-columns: repeat(3, 40%);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(10px, 300px);  */
+
+}
+
